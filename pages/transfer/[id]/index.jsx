@@ -46,6 +46,10 @@ const InputAmount = (props) => {
             notes: data.notes,
             receiverId: router.query.id,
             balance: props.myData.balance,
+            image: props.detailUser.image,
+            firstName: props.detailUser.firstName,
+            lastName: props.detailUser.lastName,
+            noTelp: props.detailUser.noTelp,
           },
         },
         `/transfer/${router.query.id}/confirmation`
@@ -74,7 +78,11 @@ const InputAmount = (props) => {
           <div className="d-flex gap-3">
             <div className={styles.containerUser}>
               <Image
-                src="/1.png"
+                src={
+                  props.detailUser.image
+                    ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${props.detailUser.image}`
+                    : "/no-profile.png"
+                }
                 layout="responsive"
                 width={100}
                 height={100}

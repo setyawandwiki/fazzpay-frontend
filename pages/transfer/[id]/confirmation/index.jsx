@@ -199,15 +199,21 @@ const Confirmation = () => {
             <div className="d-flex gap-3">
               <div className={styles.containerUser}>
                 <Image
-                  src="/1.png"
+                  src={
+                    router.query.image
+                      ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${router.query.image}`
+                      : `/no-profile.png`
+                  }
                   layout="responsive"
                   width={100}
                   height={100}
                 />
               </div>
               <div>
-                <p>Samuel Suhi</p>
-                <p>+62 813-8492-9994</p>
+                <p>
+                  {router.query.firstName} {router.query.lastName}
+                </p>
+                <p>{router.query.noTelp}</p>
               </div>
             </div>
           </div>

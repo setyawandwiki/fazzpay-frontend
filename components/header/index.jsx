@@ -5,14 +5,13 @@ import Image from "next/image";
 import { useState } from "react";
 import axiosClient from "../../util/axios";
 import { useEffect } from "react";
+import Cookies from "js-cookie";
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const router = useRouter();
   const [data, setData] = useState([]);
-  const handleLogout = () => {
-    router.push("/");
-  };
+  const [user, setUser] = useState({});
 
   const togglePopNotif = () => {
     setShow(!show);
@@ -29,10 +28,23 @@ const Header = () => {
     }
   };
 
+  const getAccount = async () => {
+    try {
+      const result = await axiosClient.get(
+        `/user/profile/${Cookies.get("userId")}`
+      );
+      setUser(result.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     getData();
+    getAccount();
   }, []);
 
+  console.log(user);
   return (
     <nav
       className={`navbar navbar-expand container-fluid-lg navbar-light py-3 bg-white ${styles.headerNav}`}
@@ -61,7 +73,11 @@ const Header = () => {
             >
               <div className={styles.containerImage}>
                 <Image
-                  src="/person1.png"
+                  src={
+                    user.data.image
+                      ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${user.data.image}`
+                      : "/no-profile.png"
+                  }
                   layout="responsive"
                   width={20}
                   height={20}
@@ -70,8 +86,10 @@ const Header = () => {
                 />
               </div>
               <div className={styles.nameUser}>
-                <p className="p-0">Robert Chandler</p>
-                <p className="p-0">+62 8139 3877 7946</p>
+                <p className="p-0">
+                  {user.data.firstName} {user.data.lastName}
+                </p>
+                <p className="p-0">{user.data.noTelp}</p>
               </div>
             </a>
             <a className="nav-item nav-link" href="#">
