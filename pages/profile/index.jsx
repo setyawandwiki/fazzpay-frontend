@@ -100,6 +100,7 @@ const Profile = () => {
         >
           <div className={`${styles.containerImage}`}>
             <Image
+              alt="image"
               src={
                 user.data.image
                   ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${user.data.image}`
@@ -175,6 +176,7 @@ const Profile = () => {
                     ) : (
                       <div style={{ width: "50px", height: "50px" }}>
                         <Image
+                          alt="no-profile"
                           src="/no-profile.png"
                           layout="responsive"
                           width={100}
