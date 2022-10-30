@@ -33,7 +33,7 @@ const ListHistory = (props) => {
       <ul>
         {currentItems.map((elem) => {
           return (
-            <li className="d-flex justify-content-between mb-5">
+            <li key={elem.id} className="d-flex justify-content-between mb-5">
               <div className="d-flex gap-3 align-items-center">
                 <div className={styles.containerImage}>
                   <Image

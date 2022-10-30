@@ -74,7 +74,7 @@ const Header = () => {
               <div className={styles.containerImage}>
                 <Image
                   src={
-                    user.data.image
+                    user?.data?.image
                       ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${user.data.image}`
                       : "/no-profile.png"
                   }
@@ -87,9 +87,9 @@ const Header = () => {
               </div>
               <div className={styles.nameUser}>
                 <p className="p-0">
-                  {user.data.firstName} {user.data.lastName}
+                  {user?.data?.firstName} {user?.data?.lastName}
                 </p>
-                <p className="p-0">{user.data.noTelp}</p>
+                <p className="p-0">{user?.data?.noTelp}</p>
               </div>
             </a>
             <a className="nav-item nav-link" href="#">
