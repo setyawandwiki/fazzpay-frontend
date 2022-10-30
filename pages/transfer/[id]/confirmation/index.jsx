@@ -199,6 +199,7 @@ const Confirmation = () => {
             <div className="d-flex gap-3">
               <div className={styles.containerUser}>
                 <Image
+                  alt="profile"
                   src={
                     router.query.image
                       ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${router.query.image}`

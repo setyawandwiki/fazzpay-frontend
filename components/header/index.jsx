@@ -73,6 +73,7 @@ const Header = () => {
             >
               <div className={styles.containerImage}>
                 <Image
+                  alt="user"
                   src={
                     user?.data?.image
                       ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${user.data.image}`

@@ -78,6 +78,7 @@ const InputAmount = (props) => {
           <div className="d-flex gap-3">
             <div className={styles.containerUser}>
               <Image
+                alt="user"
                 src={
                   props.detailUser.image
                     ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${props.detailUser.image}`

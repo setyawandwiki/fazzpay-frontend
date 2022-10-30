@@ -14,6 +14,7 @@ const HandleImage = () => {
         <div style={{ width: 300, height: 300, border: "1px solid black" }}>
           <h1>handleimage with next image</h1>
           <Image
+            alt="latihan"
             src="/gambar3.jpg"
             width={300}
             height={300}

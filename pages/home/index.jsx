@@ -193,6 +193,7 @@ const Home = () => {
                   <div className="containerIncomeExpanse">
                     <div className={`${styles.containerUp} mb-3`}>
                       <Image
+                        alt="arrow"
                         src="/arrowdown.png"
                         layout="responsive"
                         width={100}
@@ -207,6 +208,7 @@ const Home = () => {
                   <div className="containerIncomeExpanse">
                     <div className={`${styles.containerUp} mb-3`}>
                       <Image
+                        alt="arrow"
                         src="/arrownup.png"
                         layout="responsive"
                         width={100}
@@ -242,6 +244,7 @@ const Home = () => {
                         <div className="d-flex gap-3 w-50">
                           <div className={`${styles.containerImage}`}>
                             <Image
+                              alt="profile"
                               src={
                                 elem.image
                                   ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${elem.image}`
