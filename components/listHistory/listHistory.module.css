@@ -1,0 +1,9 @@
+.containerImage {
+  width: 70px;
+  height: 70px;
+}
+
+.containerHistory {
+  background: red;
+  border-radius: 20px;
+}

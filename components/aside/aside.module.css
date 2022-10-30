@@ -1,0 +1,35 @@
+.containerIcon {
+  /* width: 2rem;
+  height: 2rem; */
+}
+
+.containerSideBar {
+  box-shadow: 5px 0px 20px rgba(103, 92, 92, 0.4);
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.sideBar li a {
+  text-decoration: none;
+  color: rgba(58, 61, 66, 0.8);
+  font-weight: 400;
+}
+
+.sideBar li a:hover {
+  text-decoration: none;
+  color: #6379f4;
+  font-weight: 700;
+}
+
+.active {
+  color: #6379f4 !important;
+  font-weight: 700 !important;
+}
+
+.borderLeft:hover {
+  border-left: 5px solid blue;
+}
+
+.borderLeft {
+  border-left: 5px solid transparent;
+}

@@ -1,0 +1,51 @@
+.title {
+  color: #6379f4 !important;
+  font-weight: 700;
+}
+
+.containerImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.containerNotif {
+  position: absolute;
+  bottom: -630px;
+  right: 0;
+  height: auto;
+  background: white;
+  width: 300px;
+  height: 600px;
+  z-index: 999;
+}
+
+.containerBell {
+  position: relative;
+}
+
+.containerUser {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.headerNav {
+  box-shadow: 0px 15px 5px rgba(48, 48, 47, 0.026);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nameUser p:first-child {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #3a3d42;
+}
+
+.nameUser p:last-child {
+  font-size: 0.75rem;
+  padding: 0;
+  margin: 0;
+  color: #3a3d42;
+}

@@ -1,0 +1,60 @@
+.backgroundLogin {
+  background: #6379f4;
+  height: 100vh;
+}
+
+.formStyle h5 {
+  font-weight: 700;
+  /* letter-spacing: 0.2px; */
+  line-height: 35px;
+}
+
+.formStyle p {
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.formStyle input {
+  border: none;
+}
+
+.containerSize {
+  border-bottom: 1px solid rgba(169, 169, 169, 0.6);
+}
+
+.containerSize i {
+  color: rgba(169, 169, 169, 0.6);
+  cursor: pointer;
+}
+
+.buttonSubmit {
+  background: #dadada !important;
+  border: none !important;
+  padding: 0.8rem 0;
+  color: #88888f !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.buttonSubmitSuccess {
+  background: #6379f4 !important;
+  border: none !important;
+  padding: 0.8rem 0;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  font-size: 18px !important;
+}
+
+.failed {
+  color: red !important;
+}
+
+.form-group input:active {
+  background: transparent;
+}
+
+.containerFailed {
+  border-bottom: 1px solid red;
+}

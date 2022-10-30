@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ["https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839"],
   },
   env: {
     URL_BACKEND: "https://fazzpay-rose.vercel.app",

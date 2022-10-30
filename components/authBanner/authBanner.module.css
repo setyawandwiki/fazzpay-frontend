@@ -1,0 +1,24 @@
+.wave {
+  top: 25% !important;
+}
+
+.containerImage {
+  width: 30vw;
+  margin: auto;
+}
+
+.contentContainer {
+  margin: auto !important;
+  color: white;
+  line-height: 28px;
+}
+
+.contentContainer p {
+  font-size: 0.8rem;
+}
+
+.contentContainer h5 {
+  font-weight: 700;
+  font-size: 24px !important;
+  font-size: 0.8rem;
+}
