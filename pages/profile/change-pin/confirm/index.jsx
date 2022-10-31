@@ -98,9 +98,12 @@ const ChangePinConfirm = () => {
         theme="colored"
       />
       <div className="row">
-        <div className="col-12 mt-4 bg-white rounded bg-white">
-          <h5>Change Pin</h5>
-          <p>
+        <div
+          className="col-12 shadow p-3 mt-4 bg-white bg-white"
+          style={{ borderRadius: "20px", height: "80vh" }}
+        >
+          <h5 className={styles.changePin}>Change Pin</h5>
+          <p className={`pb-5 ${styles.paragraph}`}>
             Enter your current 6 digits Fazzpay PIN below to continue to the
             next steps.
           </p>

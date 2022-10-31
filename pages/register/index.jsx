@@ -234,7 +234,12 @@ export default function Login() {
                   )}
                 </button>
                 <p className="mt-4 text-center">
-                  Don’t have an account? Let’s <Link href="/home">Sign up</Link>{" "}
+                  Don’t have an account? Let’s{" "}
+                  <Link href="/login">
+                    <a href="" style={{ textDecoration: "none" }}>
+                      Login
+                    </a>
+                  </Link>{" "}
                 </p>
               </form>
             </div>

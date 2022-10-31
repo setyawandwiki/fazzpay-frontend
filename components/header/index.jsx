@@ -6,6 +6,7 @@ import { useState } from "react";
 import axiosClient from "../../util/axios";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
+import Link from "next/link";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -66,33 +67,35 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav w-100">
-            <a
-              className={`nav-item nav-link gap-2 align-items-center ${styles.containerUser}`}
-              href="#"
-              style={{ marginLeft: "auto" }}
-            >
-              <div className={styles.containerImage}>
-                <Image
-                  alt="user"
-                  src={
-                    user?.data?.image
-                      ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${user.data.image}`
-                      : "/no-profile.png"
-                  }
-                  layout="responsive"
-                  width={20}
-                  height={20}
-                  objectFit="cover"
-                  objectPosition={""}
-                />
-              </div>
-              <div className={styles.nameUser}>
-                <p className="p-0">
-                  {user?.data?.firstName} {user?.data?.lastName}
-                </p>
-                <p className="p-0">{user?.data?.noTelp}</p>
-              </div>
-            </a>
+            <Link href="/profile">
+              <a
+                className={`nav-item nav-link gap-2 align-items-center ${styles.containerUser}`}
+                href="#"
+                style={{ marginLeft: "auto" }}
+              >
+                <div className={styles.containerImage}>
+                  <Image
+                    alt="user"
+                    src={
+                      user?.data?.image
+                        ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839/${user.data.image}`
+                        : "/no-profile.png"
+                    }
+                    layout="responsive"
+                    width={20}
+                    height={20}
+                    objectFit="cover"
+                    objectPosition={""}
+                  />
+                </div>
+                <div className={styles.nameUser}>
+                  <p className="p-0">
+                    {user?.data?.firstName} {user?.data?.lastName}
+                  </p>
+                  <p className="p-0">{user?.data?.noTelp}</p>
+                </div>
+              </a>
+            </Link>
             <a className="nav-item nav-link" href="#">
               <div
                 onClick={togglePopNotif}

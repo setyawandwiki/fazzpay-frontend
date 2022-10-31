@@ -33,6 +33,7 @@ const PhoneNumber = () => {
         });
       })
       .catch((err) => {
+        console.log(err);
         toast.error(err.response.data.msg, {
           position: "top-center",
           autoClose: 5000,

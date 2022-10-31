@@ -15,6 +15,7 @@ import {
 } from "store/actions/user";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const Profile = () => {
   const user = useSelector((state) => state.user);
@@ -22,6 +23,8 @@ const Profile = () => {
   const [image, setImage] = useState("");
   const [updateImage, setUpdateImage] = useState({ image: "" });
   const [form, setForm] = useState({ firstName: "", lastName: "" });
+
+  const router = useRouter();
 
   useEffect(() => {
     dispatch(getUserById(Cookies.get("userId")));
@@ -46,6 +49,19 @@ const Profile = () => {
 
   const handleChangeForm = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const logout = async (e) => {
+    e.preventDefault();
+    try {
+      await axiosClient.post("/auth/logout");
+      localStorage.clear();
+      Cookies.remove("userId");
+      Cookies.remove("token");
+      router.reload();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const deleteImage = (e) => {
@@ -280,6 +296,7 @@ const Profile = () => {
           <Link href="/home">
             <div className="mb-4">
               <a
+                onClick={logout}
                 href=""
                 className={`d-flex justify-content-between p-3 ${styles.buttonProfile}`}
                 style={{
@@ -288,7 +305,7 @@ const Profile = () => {
                   borderRadius: "10px",
                 }}
               >
-                <p className="m-0">Log out</p>
+                <p className="m-0 p-0 btn">Log out</p>
                 <i class="d-flex align-items-center bi bi-arrow-right"></i>
               </a>
             </div>

@@ -39,7 +39,7 @@ const ListUser = (props) => {
           return (
             <>
               <li
-                className="d-flex py-3 px-3 justify-content-between rounded mb-5 shadow"
+                className="d-flex py-1 px-3 justify-content-between rounded mb-5 shadow"
                 style={{ cursor: "pointer" }}
                 onClick={() => handleNavigate(elem.id)}
               >

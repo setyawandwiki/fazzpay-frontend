@@ -163,10 +163,15 @@ const Aside = () => {
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-header" style={{ borderBottom: "none" }}>
-              <h5 className="modal-title" id="topupModal">
+              <h5
+                className="modal-title"
+                id="topupModal"
+                style={{ fontWeight: "700", fontSize: "18px" }}
+              >
                 Top up
               </h5>
               <button
+                style={{ background: "transparent", border: "none" }}
                 type="button"
                 className="close"
                 data-dismiss="modal"
@@ -177,7 +182,10 @@ const Aside = () => {
             </div>
             <div className="modal-body">
               <div className="form-group">
-                <label for="exampleInputEmail1 text-secondary">
+                <label
+                  for="exampleInputEmail1 text-secondary"
+                  style={{ color: "rgba(58, 61, 66, 0.6)" }}
+                >
                   Enter the amount of money, and click submit
                 </label>
                 <input
@@ -194,7 +202,8 @@ const Aside = () => {
             <div className="modal-footer" style={{ borderTop: "none" }}>
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn text-white px-5"
+                style={{ background: "#6379F4 !important" }}
                 onClick={submitTopUp}
               >
                 Submit

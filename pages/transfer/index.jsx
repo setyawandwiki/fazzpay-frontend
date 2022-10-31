@@ -15,8 +15,13 @@ const Transfer = (props) => {
   return (
     <Layout>
       <div className="row">
-        <div className="col-12">
-          <h5>Search Receiver</h5>
+        <div
+          className="col-12 mt-4 p-3 bg-white shadow"
+          style={{ borderRadius: "20px" }}
+        >
+          <h5 className="py-3" style={{ color: "#3A3D42", fontWeight: 700 }}>
+            Search Receiver
+          </h5>
           <form>
             <div className="d-flex">
               <button type="submit" className={styles.button}>

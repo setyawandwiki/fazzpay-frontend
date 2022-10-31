@@ -1,0 +1,25 @@
+.buttonSubmit {
+  background: #dadada !important;
+  border: none;
+  padding: 0.8rem 0;
+  font-weight: 700;
+}
+
+.buttonSubmitSuccess {
+  background: #6379f4 !important;
+  border: none;
+  padding: 0.8rem 0;
+  font-weight: 700;
+  color: white;
+}
+
+.buttonDisabled {
+  background: #dadada !important;
+  color: #88888f !important;
+  border: none !important;
+}
+
+.buttonUnDisabled {
+  background: #6379f4 !important;
+  color: white !important;
+}
