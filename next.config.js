@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
   images: {
     domains: ["https://res.cloudinary.com/dd1uwz8eu/image/upload/v1666604839"],
   },
